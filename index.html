@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Danmi Lab — Android apps available on Google Play." />
+  <meta name="theme-color" content="#0a0f1c" />
+  <title>Danmi Lab | Android Apps</title>
+  <style>
+    :root{--bg:#070b13;--bg2:#0c1220;--text:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.08);--green:#34d399;--blue:#60a5fa;--shadow:0 24px 70px rgba(0,0,0,.34);--radius:26px}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 15% 8%,rgba(96,165,250,.12),transparent 28%),radial-gradient(circle at 88% 15%,rgba(52,211,153,.10),transparent 26%),linear-gradient(180deg,var(--bg),var(--bg2) 48%,var(--bg));line-height:1.6;min-height:100vh}
+    a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 36px));margin:auto}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(7,11,19,.74);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:#051019;background:linear-gradient(135deg,var(--green),var(--blue));font-weight:900;box-shadow:0 10px 30px rgba(52,211,153,.16)}
+    .nav-links{display:flex;gap:24px;color:#cbd5e1;font-size:.95rem}.nav-links a:hover{color:#fff}.hero{padding:112px 0 82px;text-align:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:#dbeafe;font-size:.87rem;margin-bottom:28px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 15px var(--green)}
+    h1{max-width:940px;margin:0 auto 26px;font-size:clamp(3.2rem,8vw,7rem);line-height:.93;letter-spacing:-.065em}.gradient{background:linear-gradient(90deg,#fff 5%,#c7d2fe 46%,#a7f3d0 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:730px;margin:0 auto 34px;color:var(--muted);font-size:clamp(1rem,2vw,1.18rem)}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 21px;border-radius:14px;border:1px solid var(--line);font-weight:750;transition:.22s ease}.btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#06121a;border:none;background:linear-gradient(135deg,#bbf7d0,#bfdbfe);box-shadow:0 14px 34px rgba(96,165,250,.13)}.btn-secondary{background:rgba(255,255,255,.04)}
+    section{padding:74px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.045em}.section-head p{max-width:520px;color:var(--muted)}
+    .apps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.app-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,24,39,.94),rgba(14,22,37,.82));border-radius:var(--radius);padding:25px;box-shadow:var(--shadow);transition:.24s ease;display:flex;flex-direction:column}.app-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.16)}
+    .app-icon{width:74px;height:74px;border-radius:21px;display:grid;place-items:center;margin-bottom:22px;font-size:2rem;border:1px solid rgba(255,255,255,.09)}.dua{background:linear-gradient(145deg,#123c33,#66d7a6)}.flix{background:linear-gradient(145deg,#2b173f,#7c3aed)}.bix{background:linear-gradient(145deg,#1f2937,#f97316)}
+    .app-card h3{font-size:1.25rem;line-height:1.25;letter-spacing:-.025em;margin-bottom:7px}.meta{color:var(--muted);font-size:.9rem;margin-bottom:18px}.app-card p{color:#b7c1cf;margin-bottom:24px;flex:1}.store-link{display:inline-flex;align-items:center;gap:7px;color:#dcfce7;font-weight:750}.store-link span{transition:.2s ease}.store-link:hover span{transform:translateX(4px)}
+    .about-card{border:1px solid var(--line);border-radius:32px;padding:clamp(28px,5vw,54px);background:linear-gradient(135deg,rgba(96,165,250,.07),rgba(52,211,153,.06)),rgba(14,22,37,.72);box-shadow:var(--shadow)}.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}.about-card h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.045em;margin-bottom:18px}.about-card p{color:#b7c1cf}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.035)}.stat strong{display:block;font-size:1.6rem;letter-spacing:-.035em}.stat span{color:var(--muted);font-size:.9rem}
+    .contact{text-align:center;padding-bottom:96px}.contact-box{border-top:1px solid var(--line);padding-top:72px}.contact h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin-bottom:14px}.contact p{color:var(--muted);margin-bottom:27px}
+    footer{border-top:1px solid var(--line);color:#748196;padding:25px 0 33px;font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:900px){.apps-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}}@media(max-width:760px){.nav-links{display:none}.hero{padding-top:78px}.section-head{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.container{width:min(100% - 24px,1160px)}.hero{padding:62px 0 52px}section{padding:56px 0}.app-card{padding:20px}.stats{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="nav"><div class="container nav-inner"><a class="brand" href="#home"><span class="brand-mark">DL</span><span>Danmi Lab</span></a><nav class="nav-links"><a href="#apps">Apps</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+  <main>
+    <section class="hero" id="home"><div class="container"><div class="badge"><span class="dot"></span>Android Developer on Google Play</div><h1><span class="gradient">Apps built to be useful, simple and accessible.</span></h1><p>Welcome to the official Danmi Lab website. Explore our Android applications and visit our Google Play developer page.</p><div class="actions"><a class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=Danmi+Lab" target="_blank" rel="noopener">View on Google Play ↗</a><a class="btn btn-secondary" href="#apps">Explore Apps</a></div></div></section>
+    <section id="apps"><div class="container"><div class="section-head"><div><div class="badge">Published apps</div><h2>Available on Google Play</h2></div><p>Android applications currently published under the Danmi Lab developer account.</p></div>
+      <div class="apps-grid">
+        <article class="app-card"><div class="app-icon dua">☾</div><h3>دعاء المريض بدون نت</h3><div class="meta">Books &amp; Reference · 1K+ downloads</div><p>تطبيق يحتوي على مجموعة من الأدعية المكتوبة للمريض والشفاء، بتجربة بسيطة وسهلة الاستخدام.</p><a class="store-link" href="https://play.google.com/store/apps/details?id=com.douaalmard.chifaadouaa" target="_blank" rel="noopener">Open on Google Play <span>→</span></a></article>
+        <article class="app-card"><div class="app-icon flix">🎬</div><h3>Flixbaba : Movies &amp; TV Shows</h3><div class="meta">Entertainment · 50+ downloads</div><p>Discover movie and TV show information, official trailers, search tools and favorites in a clean interface.</p><a class="store-link" href="https://play.google.com/store/apps/details?id=com.flixbaba.movies" target="_blank" rel="noopener">Open on Google Play <span>→</span></a></article>
+        <article class="app-card"><div class="app-icon bix">▶</div><h3>BIXPLUS</h3><div class="meta">Entertainment · 1K+ downloads</div><p>A media player and browser with categories, search, favorites, recent content and flexible playback options.</p><a class="store-link" href="https://play.google.com/store/apps/details?id=com.bixmax.movies" target="_blank" rel="noopener">Open on Google Play <span>→</span></a></article>
+      </div>
+    </div></section>
+    <section id="about"><div class="container"><div class="about-card"><div class="about-grid"><div><div class="badge">About Danmi Lab</div><h2>Android apps across entertainment and reference.</h2><p>Danmi Lab publishes Android applications designed around clear navigation, useful features and straightforward mobile experiences.</p></div><div class="stats"><div class="stat"><strong>3</strong><span>Apps currently listed</span></div><div class="stat"><strong>Android</strong><span>Primary platform</span></div><div class="stat"><strong>Google Play</strong><span>Official distribution</span></div><div class="stat"><strong>Danmi Lab</strong><span>Developer name</span></div></div></div></div></div></section>
+    <section class="contact" id="contact"><div class="container contact-box"><h2>Support &amp; contact</h2><p>For app-specific support, use the support details available on the corresponding Google Play listing.</p><div class="actions"><a class="btn btn-primary" href="mailto:danmilteshalumijesha@gmail.com">Contact Developer</a><a class="btn btn-secondary" href="https://play.google.com/store/apps/developer?id=Danmi+Lab" target="_blank" rel="noopener">Google Play Page ↗</a></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Danmi Lab. All rights reserved.</span><span>Android apps available on Google Play.</span></div></footer>
+  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
